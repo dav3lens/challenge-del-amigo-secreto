@@ -51,7 +51,9 @@ function agregarAmigo() {
     mensajes();
     //Limpiar el campo de texto
     limpiarCampo();
+    if (!document.getElementById('amigo').disabled) {
     document.getElementById('amigo').focus();
+    }
     desactivarCampoYBoton();
     mostrarAmigos();
 }
