@@ -15,12 +15,16 @@
     box-sizing: border-box;
 }
 
+/* Ajustes responsive generales */
+html, body {
+    width: 100%;
+    min-height: 100vh;
+}
+
 body {
     height: 100vh;
     background-color: var(--color-primary);
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .main-content {
@@ -167,4 +171,59 @@ ul {
 
 .button-draw:hover {
     background-color: var(--color-button-hover);
+}
+
+@media (max-width: 700px) {
+    .header-banner {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px 0 0;
+        text-align: center;
+    }
+    .main-title {
+        font-size: 32px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .section-title {
+        font-size: 22px;
+    }
+    .input-title,
+    .input-name,
+    .button-add,
+    .button-draw,
+    ul,
+    .result-list {
+        font-size: 14px;
+    }
+    .header-banner img {
+        margin-bottom: 10px;
+        max-width: 80vw;
+        height: auto;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .button-draw {
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        max-width: 220px;
+        min-width: 120px;
+        padding: 8px 0;
+        font-size: 14px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        gap: 8px;
+    }
+    .button-draw img {
+        margin-right: 0;
+        margin-bottom: 8px;
+        max-width: 32px;
+        height: auto;
+    }
 }
