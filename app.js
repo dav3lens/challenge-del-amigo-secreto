@@ -23,6 +23,7 @@ document.getElementById('amigo').addEventListener('keydown', function(event) {
     }
 });
 
+document.getElementById('amigo').focus();
 //Funcion para agregar un amigo
 function agregarAmigo() {
     let nombre = document.getElementById('amigo').value.trim();
@@ -33,6 +34,7 @@ function agregarAmigo() {
     if (amigos.includes(nombre)) {
         alert('El amigo ya está en la lista');
         limpiarCampo();
+        document.getElementById('amigo').focus();
         return;
     }
     if (numeroDeAmigos >= numeroMaximoDeAmigos) {
@@ -48,8 +50,9 @@ function agregarAmigo() {
     //Mensajes de instrucciones
     mensajes();
     //Limpiar el campo de texto
-    desactivarCampoYBoton();
     limpiarCampo();
+    document.getElementById('amigo').focus();
+    desactivarCampoYBoton();
     mostrarAmigos();
 }
 
